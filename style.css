@@ -28,8 +28,8 @@ html {
   font-size: 1.2rem;
   padding: 1rem 0.3rem;
   transition: all 0.07s ease;
-  width: 8rem;
-  min-width: 6rem;
+  width: 100%; /* Updated to full width for mobile devices */
+  max-width: 15rem; /* Set a maximum width for larger screens */
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.4);
@@ -53,3 +53,12 @@ kbd {
   letter-spacing: 0.1rem;
   color: #9bc53d;
 }
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+  .key {
+    width: 100%; /* Set full width for smaller screens */
+    max-width: none; /* Remove maximum width */
+  }
+}
+
